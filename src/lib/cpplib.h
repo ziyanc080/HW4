@@ -9,6 +9,9 @@ using namespace std;
 /**
  *  Example class used for GTest demo
  */
+
+
+
 struct TreeNode {
       int val;
       TreeNode *left;
@@ -18,10 +21,13 @@ struct TreeNode {
       TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+
+
 class CPPLib {
  public:
   //q1
   vector<int> keepOdd(const vector<int>& input);
+
   vector<int> transform(const vector<int>& input);
   int sum(const vector<int>& input);
 
@@ -31,14 +37,19 @@ class CPPLib {
   int SumOfNodes(TreeNode* root);
   int DepthOfTree(TreeNode* root);
   int DiameterOfTree(TreeNode* root);
-
+    void Inorder (TreeNode *a, std::vector<int> &result);
+    int Inorder_depth (TreeNode *a);
+    
   //q4
+    void BSTInorder(TreeNode *a, bool &output);
   bool isBST(TreeNode* root);
   //optional
   int findLCA(TreeNode* root, int val_a, int val_b);
 
   private : 
 };
+
+
 
 // q3
 class BST
@@ -52,7 +63,7 @@ public:
       // one by one into the Tree
       BST(std::vector<int> initial_values);
       ~BST();
-
+       
       void push(int key); // **GT** Inserts a key inside Tree
       bool find(int key); // **GT** Returns true if key is in the Tree.
       bool erase(int key); // **GT** Remove the key from the tree. If not successful, return false.
